@@ -17,7 +17,7 @@ unsigned int moves = 0;
 #define RIGHT 3
 
 #define CELLHEIGHT 12
-#define CELLWIDTH 15
+#define CELLWIDTH 14
 
 void makemove(uint8_t direction)
 {
@@ -106,7 +106,7 @@ void drawgame()
       if (4 * i + j != emptypos)
       {
         if (values[4 * i + j] < 9)
-          gb.display.cursorX = j * CELLWIDTH + (CELLWIDTH - 5) / 2;
+          gb.display.cursorX = j * CELLWIDTH + (CELLWIDTH - 5) / 2 + 1;
         else
           gb.display.cursorX = j * CELLWIDTH+ (CELLWIDTH- 11) / 2;
         gb.display.cursorY = i * CELLHEIGHT+ (CELLHEIGHT - 7) / 2 + 1;
